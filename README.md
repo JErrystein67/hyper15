@@ -1,2 +1,2 @@
 # LiquidGlassLauncher
-Android launcher with transparent glass layout.
+Custom Android launcher project.
