@@ -1,13 +1,4 @@
-<resources>
-    <style name="Theme.LiquidGlass" parent="android:Theme.DeviceDefault.NoActionBar">
-        <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:enforceNavigationBarContrast">false</item>
-        <item name="android:enforceStatusBarContrast">false</item>
-        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.LiquidGlassLauncher" parent="android:Theme.Material.Light.NoActionBar">
     </style>
 </resources>
