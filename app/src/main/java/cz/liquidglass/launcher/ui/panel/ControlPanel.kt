@@ -279,8 +279,8 @@ private fun ControlsPane(modifier: Modifier, c: SystemControls) {
                     }
                 }
                 Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
-                    GlassSlider(Icons.Rounded.LightMode, c.brightness, Color(0xFFFFB800), c::setBrightness, Modifier.width(u).height(sliderH))
-                    GlassSlider(Icons.Rounded.VolumeUp, c.volume, Color(0xFF0A84FF), c::setVolume, Modifier.width(u).height(sliderH))
+                    GlassSlider(Icons.Rounded.LightMode, c.brightness, Color(0xFFFFB800), c::changeBrightness, Modifier.width(u).height(sliderH))
+                    GlassSlider(Icons.Rounded.VolumeUp, c.volume, Color(0xFF0A84FF), c::changeVolume, Modifier.width(u).height(sliderH))
                 }
             }
             GlassPill(onClick = c::openSettings, modifier = Modifier.fillMaxWidth()) {

@@ -128,14 +128,14 @@ class SystemControls(context: Context) {
         } else requestWriteSettings()
     }
 
-    fun setBrightness(v: Float) {
+    fun changeBrightness(v: Float) {
         if (!Settings.System.canWrite(ctx)) { requestWriteSettings(); return }
         brightness = v.coerceIn(0f, 1f)
         Settings.System.putInt(cr, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL)
         Settings.System.putInt(cr, Settings.System.SCREEN_BRIGHTNESS, (brightness * 255).roundToInt().coerceIn(1, 255))
     }
 
-    fun setVolume(v: Float) {
+    fun changeVolume(v: Float) {
         volume = v.coerceIn(0f, 1f)
         val max = audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
         audio.setStreamVolume(AudioManager.STREAM_MUSIC, (volume * max).roundToInt(), 0)
