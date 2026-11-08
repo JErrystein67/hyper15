@@ -278,7 +278,7 @@ fun WidgetPicker(
         value = withContext(Dispatchers.Default) {
             val pm = ctx.packageManager
             providers
-                .groupBy { runCatching { it.providerInfo.applicationInfo.loadLabel(pm).toString() }.getOrDefault(it.provider.packageName) }
+                .groupBy { runCatching { pm.getApplicationInfo(it.provider.packageName, 0).loadLabel(pm).toString() }.getOrDefault(it.provider.packageName) }
                 .entries.sortedBy { it.key.lowercase() }
                 .map { it.key to it.value }
         }
